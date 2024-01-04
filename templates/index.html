@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Document Scanner</h1>
+        </header>
+        
+        <main>
+            <section class="upload-section">
+                <h4>Upload a Document to Scan</h4>
+                <form method="POST" action="/upload" enctype="multipart/form-data">
+                    <div class="file-input-container">
+                        <label for="file" class="file-label">
+                            <span>Choose a file</span>
+                        </label>
+                        <input type="file" name="file" id="file" class="file-input" accept=".jpg, .jpeg, .png, .pdf" required>
+                        <span id="file-name"></span>
+                    </div>
+                    <button type="submit" class="upload-button">Upload</button>
+                </form>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Supported formats: JPG, JPEG, PNG, PDF</p>
+        </footer>
+
+        <script>
+            // Display selected file name
+            document.getElementById('file').addEventListener('change', function() {
+                document.getElementById('file-name').textContent = this.files[0].name;
+            });
+        </script>
+    </div>
+</body>
+</html>

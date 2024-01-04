@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scanned Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <center>
+    <h1>Scanned Document</h1>
+    
+    <div class="document-container">
+        <!-- <img src="{{ url_for('static', filename=filename) }}" alt="Scanned Document"> -->
+        <img src="{{ url_for('show_scanned', filename=filename) }}" alt="Scanned Document" height="400px">
+    </div>
+    
+    <a href="/">Upload another document</a>
+    </center>
+</body>
+</html>
