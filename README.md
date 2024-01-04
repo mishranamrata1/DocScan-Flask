@@ -18,6 +18,6 @@ OpenCV
 
 2. Scan Document:
    - Click the "Scan" button to initiate the document scanning process.
-   - 
+
 3. View and Download:
    - Review the scanned document and download using right click and save as jpeg.
