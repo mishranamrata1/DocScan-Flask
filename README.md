@@ -8,9 +8,9 @@ DocScanner Flask App is a web-based document scanning application built using th
 4. Easy to Use: User-friendly web interface for seamless document uploading and scanning.
 
 # Prerequisites
-Python 
-Flask
-OpenCV
+Python==3.10.11
+Flask==2.3.3
+opencv-python==4.8.0.76
 
 # Usage
 1. Upload a Document:
